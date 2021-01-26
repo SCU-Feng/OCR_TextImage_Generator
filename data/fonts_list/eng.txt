@@ -1,0 +1,2 @@
+./data/fonts/heiti/heiti.TTF
+./data/fonts/TimesNewRoman/TimesNewRoman.ttf

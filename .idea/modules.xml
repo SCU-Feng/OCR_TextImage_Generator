@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/OCR_TextImage_generator.iml" filepath="$PROJECT_DIR$/.idea/OCR_TextImage_generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/text_renderer.iml" filepath="$PROJECT_DIR$/.idea/text_renderer.iml" />
     </modules>
   </component>
 </project>
