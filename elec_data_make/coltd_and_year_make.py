@@ -2,9 +2,9 @@
 制作公司名称+生产年份的语料库
 """
 
-txt_path_coltd = r"D:\FengZhan\text_renderer\data\elec_corpus\coltd_106.txt"
-txt_path_year = r"D:\FengZhan\text_renderer\data\elec_corpus\year_2009_2020.txt"
-txt_path_save = r"D:\FengZhan\text_renderer\data\elec_corpus\coltd_and_year.txt"
+txt_path_coltd = r"..\data\elec_corpus\coltd_106_heiti.txt"
+txt_path_year = r"..\data\elec_corpus\year_2009_2020_heiti.txt"
+txt_path_save = r"..\data\elec_corpus\coltd_and_year.txt"
 txt_save = []
 
 with open(txt_path_coltd, 'r', encoding="UTF-8") as coltd:
@@ -23,7 +23,7 @@ with open(txt_path_coltd, 'r', encoding="UTF-8") as coltd:
 
             for j, year_j in enumerate(year_list):
                 str_last = year_j.strip()
-                str_ij = str_pre + ' ' + str_last
+                str_ij = str_pre + '  ' + str_last
                 txt_save.append(str_ij)
                 print("{} / {}".format(j, length_year))
 

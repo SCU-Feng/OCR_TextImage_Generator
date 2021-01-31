@@ -6,11 +6,11 @@ import os
 def parse_args():
     parser = argparse.ArgumentParser()
     # TODO 改前缀
-    parser.add_argument('--img_prefix', type=str, default='type_', help='Images prefix')
+    parser.add_argument('--img_prefix', type=str, default='year_', help='Images prefix')
     # TODO 改保存分支
-    parser.add_argument('--tag', type=str, default='2021_1_25', help='output images are saved under output_dir/{tag} dir')
+    parser.add_argument('--tag', type=str, default='2021_1_30', help='output images are saved under output_dir/{tag} dir')
     # TODO 改图像数量
-    parser.add_argument('--num_img', type=int, default=20000, help="Number of images to generate")
+    parser.add_argument('--num_img', type=int, default=100000, help="Number of images to generate")
     # TODO 改字体路径
     parser.add_argument('--fonts_list', type=str, default='./data/fonts_list/TimesNewRoman.txt',
                         help='Fonts file path to use')
@@ -18,9 +18,9 @@ def parse_args():
     parser.add_argument('--chars_file', type=str, default='./data/chars/num_eng_Roman.txt',
                         help='Chars allowed to be appear in generated images.')
 
-    parser.add_argument('--img_height', type=int, default=64)
-    # TODO 改图片大小，年份是256，其他是1024
-    parser.add_argument('--img_width', type=int, default=1024,
+    parser.add_argument('--img_height', type=int, default=56)
+    # TODO 改图片大小
+    parser.add_argument('--img_width', type=int, default=130,
                         help="If 0, output images will have different width")
 
     parser.add_argument('--length', type=int, default=10,
@@ -47,7 +47,7 @@ def parse_args():
                              'chn: pick continuous chars from corpus'
                              'eng: pick continuous words from corpus, space is included in label')
 
-    parser.add_argument('--output_dir', type=str, default=r'D:\FengZhan\ElectricityMeter\Data\virtual_make\dataset_20w', help='Images save dir')
+    parser.add_argument('--output_dir', type=str, default=r'D:\fengzhan\ocr_data\virtual_make\dataset_100w', help='Images save dir')
 
 
     parser.add_argument('--debug', action='store_true', default=False, help="output uncroped image")

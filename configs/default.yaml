@@ -5,21 +5,8 @@
 # year：44-64
 # default 14-23
 font_size:
-  min: 54
-  max: 80
-
-# choose Text color range
-# color boundary is in R,G,B format
-font_color:
-  enable: false
-  blue:
-    fraction: 0.5
-    l_boundary: [0,0,150]
-    h_boundary: [60,60,255]
-  brown:
-    fraction: 0.5
-    l_boundary: [139,70,19]
-    h_boundary: [160,82,43]
+  min: 44
+  max: 64
 
 # By default, text is drawed by Pillow with (https://stackoverflow.com/questions/43828955/measuring-width-of-text-python-pil)
 # If `random_space` is enabled, some text will be drawed char by char with a random space
@@ -27,22 +14,12 @@ random_space:
   enable: true
   fraction: 1
   min: -0.1 # -0.1 will make chars very close or even overlapped
-  max: 0.3
-
-# Do remap with sin()
-# Currently this process is very slow!
-curve:
-  enable: false
-  fraction: 0.3
-  period: 360  # degree, sin 函数的周期
-  min: 1 # sin 函数的幅值范围
-  max: 5
+  max: 0.1
 
 # random crop text height
 crop:
   enable: true
   fraction: 0.5
-
   # top and bottom will applied equally
   top:
     min: 5
@@ -56,21 +33,6 @@ img_bg:
   enable: true
   fraction: 1
 
-# Not work when random_space applied
-text_border:
-  enable: false
-  fraction: 0.5
-
-  # lighter than word color
-  light:
-    enable: true
-    fraction: 0.5
-
-  # darker than word color
-  dark:
-    enable: true
-    fraction: 0.5
-
 # https://docs.opencv.org/3.4/df/da0/group__photo__clone.html#ga2bf426e4c93a6b1f21705513dfeca49d
 # https://www.cs.virginia.edu/~connelly/class/2014/comp_photo/proj2/poisson.pdf
 # Use opencv seamlessClone() to draw text on background
@@ -80,8 +42,8 @@ seamless_clone:
   fraction: 1
 
 perspective_transform:
-  max_x: 25
-  max_y: 25
+  max_x: 20
+  max_y: 8
   max_z: 3
 
 blur:
@@ -116,7 +78,7 @@ noise:
 
 line:
   enable: true
-  fraction: 0.05
+  fraction: 0.1
 
   under_line:
     enable: true
@@ -158,3 +120,42 @@ sharp:
   enable: true
   fraction: 0.1
 
+
+# choose Text color range
+# color boundary is in R,G,B format
+font_color:
+  enable: false
+  blue:
+    fraction: 0.5
+    l_boundary: [0,0,150]
+    h_boundary: [60,60,255]
+  brown:
+    fraction: 0.5
+    l_boundary: [139,70,19]
+    h_boundary: [160,82,43]
+
+
+# Do remap with sin()
+# Currently this process is very slow!
+curve:
+  enable: false
+  fraction: 0.3
+  period: 360  # degree, sin 函数的周期
+  min: 1 # sin 函数的幅值范围
+  max: 5
+
+
+# Not work when random_space applied
+text_border:
+  enable: false
+  fraction: 0.5
+
+  # lighter than word color
+  light:
+    enable: true
+    fraction: 0.5
+
+  # darker than word color
+  dark:
+    enable: true
+    fraction: 0.5
